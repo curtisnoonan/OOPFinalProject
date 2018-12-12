@@ -1,0 +1,27 @@
+Curtis Noonan
+Comp 586 - Dec 12
+OOP Final Project - Not deployed and No ORM
+
+Angular included in OOPFinalProject/workout/frontend/src/app
+ASP.NET included in OOPFinalProject/workout/frontend/backend/backend
+
+1. Models: Exercise and Workout located in OOPFinalProject/workout/frontend/backend/backend/models
+2. Controllers: AccountController, ExerciseController, ExercisesController, WorkoutsController located in OOPFinalProject/workout/frontend/backend/backend/controllers
+3. Views: register.component.html, login.component.html, workout.component.html, workouts.component.html, exercise.component.html, exercises.component.html
+Routing found in app-routing.module.ts
+
+4. Get and Post APIs found in OOPFinalProject/workout/frontend/src/app/api.service.ts, OOPFinalProject/workout/frontend/src/app/auth.service.ts, 
+	OOPFinalProject/workout/frontend/backend/backend/controllers/AccountController, OOPFinalProject/workout/frontend/backend/backend/controllers/ExercisesController,
+	OOPFinalProject/workout/frontend/backend/backend/controllers/WorkoutsController
+5. DI found throughout including, OOPFinalProject/workout/frontend/backend/backend/ExerciseContext.cs, OOPFinalProject/workout/frontend/backend/backend/WorkoutContext.cs, 
+	OOPFinalProject/workout/frontend/backend/backen/UserDbContext.cs
+6. Authentication using JWT in OOPFinalProject/workout/frontend/backend/backend/controllers/AccountController.cs, OOPFinalProject/workout/frontend/src/app/auth.service.ts,
+	OOPFinalProject/workout/frontend/src/app/auth.interceptor.ts, must register or login with account to receive token
+
+Walkthrough:
+1. Click on Register, enter email: "email@test.com" password: "Pass.word1" : Token Received here
+2. Enter "Workout 1" into workout title, click post, refresh page
+3. Click on Workout 1, Click on Edit Exercises, Enter "Exercise 1" into exercise name, click post, refresh page
+4. Click on Exercise 1, click Edit to modify the name and New to add a new exercise
+
+This is essentially what I showed you in class last Wednesday, I tried to implement ORM to my project, but could not integrate it in time.
