@@ -1,0 +1,9 @@
+<mat-card>
+  <mat-card-content>
+    Workouts List
+    <mat-list *ngFor="let workout of workouts">
+      <mat-list-item class = "clickLink" (click)= "api.selectWorkout(workout)">{{workout.title}}</mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
+

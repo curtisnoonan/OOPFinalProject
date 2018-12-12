@@ -1,0 +1,21 @@
+<mat-card>
+  <mat-card-title>
+    <span *ngIf="exercise.id">Edit Exercise</span>
+    <span *ngIf="!exercise.id">New Exercise</span>
+  </mat-card-title>
+  <mat-card-content>
+    <form>
+      <mat-form-field>
+        <input [(ngModel)] = "exercise.text" name="exercise" matInput placeholder="Exercise Name">
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+<mat-card-actions>
+  <button *ngIf="exercise.id" (click)="api.putExercise(exercise)" mat-button> Edit </button>
+  <button *ngIf="exercise.id" (click)="exercise = {}" mat-button> New </button>
+  <button *ngIf="!exercise.id" (click)="post(exercise)" mat-button> Post </button>
+
+</mat-card-actions>
+
+</mat-card>
+<exercises></exercises>
