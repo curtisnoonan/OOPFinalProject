@@ -44,7 +44,7 @@ namespace backend
              }));
       
 
-      services.AddDbContext<ExerciseContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("Exercises")));
+      services.AddDbContext<ExerciseContext>(opt => opt.UseInMemoryDatabase("Exercise"));
       services.AddDbContext<WorkoutContext>(opt => opt.UseInMemoryDatabase("Workout"));
             //services.AddDbContext<BodyPartContext>(opt => opt.UseInMemoryDatabase("BodyParts"));
 
